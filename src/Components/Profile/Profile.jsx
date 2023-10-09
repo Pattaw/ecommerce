@@ -12,12 +12,12 @@ function Profile() {
             {decode.role === "user" ? (
               <i
                 style={{ fontSize: "8rem" }}
-                class="text-main fa-solid fa-user"
+                className="text-main fa-solid fa-user"
               ></i>
             ) : (
               <i
                 style={{ fontSize: "8rem" }}
-                class="text-main fa-solid fa-landmark"
+                className="text-main fa-solid fa-landmark"
               ></i>
             )}
           </div>

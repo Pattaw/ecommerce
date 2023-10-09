@@ -77,7 +77,7 @@ function Footer() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-12 col-md-6 d-flex align-items-center flex-end  appSection">
+                  <div className="col-12 col-md-6 d-flex align-items-center justify-content-end  appSection">
                     Get deliveries with FreshCart{" "}
                     <img
                       width={200}

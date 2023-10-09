@@ -32,7 +32,6 @@ let productsReducer = createSlice({
     builder.addCase(getProducts.fulfilled, (state, action) => {
       state.isLoading = false;
       state.products = action.payload;
-      console.log("product details ", state.productDetails);
     });
     builder.addCase(getProducts.rejected, (state, action) => {
       state.isLoading = false;

@@ -70,9 +70,9 @@ function Cart() {
             </button>
           </div>
           <div className=" mt-5 bg-light p-3">
-            {cartProduct?.products.map((product) => {
+            {cartProduct?.products.map((product, index) => {
               return (
-                <>
+                <div key={index}>
                   <div
                     className="row border-bottom pb-3 mb-3"
                     key={product?.product.id}
@@ -127,7 +127,7 @@ function Cart() {
                       </div>
                     </div>
                   </div>
-                </>
+                </div>
               );
             })}
             <h6 className="border-bottom py-4">
