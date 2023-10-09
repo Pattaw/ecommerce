@@ -7,11 +7,10 @@ import { FallingLines } from "react-loader-spinner";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
+
 function ForgetPassword() {
   let { sendVerificationCode } = useContext(passwordContext);
-
-  let [dataStatus, setDataStatus] = useState(null);
-
+  let { dataStatus } = useContext(passwordContext);
   let [isLoading, setIsLoading] = useState(false);
 
   let navigate = useNavigate();
@@ -20,11 +19,9 @@ function ForgetPassword() {
     // setValues(values);
     let response = await sendVerificationCode(values);
 
-    // console.log(response);
-    // setDataStatus(response.response.data);
-
     if (response.data.statusMsg === "success") {
       console.log("ggg");
+
       navigate("/VerifyCode");
     }
   }
@@ -45,8 +42,10 @@ function ForgetPassword() {
   });
   return (
     <>
-      {dataStatus === null ? (
-        <div className="alert alert-danger">hello</div>
+      {dataStatus?.statusMsg === "fail" ? (
+        <div className="alert text-center alert-danger">
+          {dataStatus.message}
+        </div>
       ) : (
         ""
       )}

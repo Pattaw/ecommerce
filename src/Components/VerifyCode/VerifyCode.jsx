@@ -7,9 +7,9 @@ import { FallingLines } from "react-loader-spinner";
 
 import { Navigate, useNavigate } from "react-router-dom";
 function VerifyCode() {
-  let { confirmVerifyCode } = useContext(passwordContext);
+  let { confirmVerifyCode, dataStatus } = useContext(passwordContext);
 
-  let [dataStatus, setDataStatus] = useState(null);
+  // let [dataStatus, setDataStatus] = useState(null);
 
   let [isLoading, setIsLoading] = useState(false);
 
@@ -17,7 +17,7 @@ function VerifyCode() {
 
   async function handleSubmit(values) {
     let response = await confirmVerifyCode(values);
-    console.log(response);
+
     if (response.data.status === "Success") {
       navigate("/ResetPassword");
     }
@@ -32,6 +32,13 @@ function VerifyCode() {
   });
   return (
     <>
+      {dataStatus?.statusMsg === "success" ? (
+        <div className="alert alert-success text-center ">
+          {dataStatus.message}
+        </div>
+      ) : (
+        ""
+      )}
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="text">Verify code: </label>
         <input

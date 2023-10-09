@@ -7,10 +7,7 @@ function NotAuthorised() {
       <div className="row">
         <div className="col-md-12 text-center">
           <div className="warning">
-            <i
-              className="text-main fa-solid fa-hand "
-              style={{ fontSize: "10rem" }}
-            ></i>
+            <i className="text-main fa-solid fa-hand AuthIcon"></i>
 
             <h1 className="my-4">
               Sorry you are not allowed to see this page.... !

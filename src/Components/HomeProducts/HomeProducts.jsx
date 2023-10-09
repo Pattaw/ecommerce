@@ -25,10 +25,19 @@ function HomeProducts() {
     "homeProducts",
     getHomeProducts
   );
+  function changeColor(id, e) {
+    if (e.target.id === id) {
+      e.target.classList.replace("fa-regular", "fa-solid");
+    }
+  }
 
   async function getWishList(id) {
     let data = await addWishList(id);
     console.log(data.data.data.length);
+
+    // if(e.target.id === id){
+    //   e.target.classList.toggle
+    // }
 
     if (data.data.status === "success") {
       console.log("iam from add wisth", data);
@@ -74,10 +83,14 @@ function HomeProducts() {
               <div className="col-md-2" key={product._id}>
                 <div className="product position-relative">
                   <div
-                    onClick={() => getWishList(product._id)}
+                    onClick={(e) => getWishList(product._id, e)}
                     className="icon cursor-pointer me-3 my-3 position-absolute top-0 end-0"
                   >
-                    <i className="fa-regular fs-5 fa-heart text-main"></i>
+                    <i
+                      onClick={(e) => changeColor(product._id, e)}
+                      id={product._id}
+                      className="fa-regular fs-5 fa-heart text-main"
+                    ></i>
                   </div>
                   <Link to={`/ProductDetails/${product._id}`}>
                     <img

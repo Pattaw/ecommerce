@@ -89,3 +89,10 @@ a:hover {
 .customShadow {
   box-shadow: 0px 0px 9px 0px #7f8c8d;
 }
+
+.navbar-nav .active {
+  color: var(--main-color) !important;
+  font-weight: bold;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+}
