@@ -1,7 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Layout from "./Components/Layout/Layout";
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createHashRouter,
+} from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Brands from "./Components/Brands/Brands";
 import Cart from "./Components/Cart/Cart";
@@ -33,7 +37,7 @@ import WishlistContextProvider from "./Context/wishlist";
 
 function App() {
   let queryProvider = new QueryClient();
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
