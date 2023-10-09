@@ -3,6 +3,7 @@ import style from "./Cart.module.css";
 import { cartContext } from "../../Context/cart";
 import { ThreeCircles } from "react-loader-spinner";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Cart() {
   let {
@@ -53,7 +54,10 @@ function Cart() {
 
   return (
     <>
-      {}
+      <Helmet>
+        <title>Cart</title>
+        <meta name="description" content="Home Component" />
+      </Helmet>
       {cartProduct ? (
         <>
           <h2>SHOP CART</h2>

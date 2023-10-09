@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import { ThreeCircles } from "react-loader-spinner";
 import { addToCart, cartContext } from "../../Context/cart";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 function ProductDetails() {
   let { id } = useParams();
@@ -42,6 +43,10 @@ function ProductDetails() {
 
   return (
     <>
+      <Helmet>
+        <title>Product Details</title>
+        <meta name="description" content="Component" />
+      </Helmet>
       {isLoading ? (
         <div className="loading d-flex align-content-center justify-content-center text-center w-100">
           <ThreeCircles

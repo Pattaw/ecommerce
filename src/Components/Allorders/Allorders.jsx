@@ -3,6 +3,7 @@ import style from "./Allorders.module.css";
 
 import { cartContext } from "../../Context/cart";
 import jwtDecode from "jwt-decode";
+import { Helmet } from "react-helmet";
 
 function Allorders() {
   let decoded = jwtDecode(localStorage.getItem("token"));
@@ -27,6 +28,10 @@ function Allorders() {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>All orders</title>
+        <meta name="description" content="Home Component" />
+      </Helmet>
       {userOrder?.map((order, index) => {
         return (
           <div className="orderCart mb-5" key={index + 1}>

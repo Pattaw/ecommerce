@@ -44,7 +44,11 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />,
+          element: (
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/Home",
@@ -109,7 +113,11 @@ function App() {
 
         {
           path: "/ProductDetails/:id",
-          element: <ProductDetails />,
+          element: (
+            <ProtectedRoute>
+              <ProductDetails />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/Category",

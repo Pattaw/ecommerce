@@ -6,6 +6,7 @@ import { passwordContext } from "../../Context/forgetPassword";
 import { FallingLines } from "react-loader-spinner";
 
 import { Navigate, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 function VerifyCode() {
   let { confirmVerifyCode, dataStatus } = useContext(passwordContext);
 
@@ -32,6 +33,10 @@ function VerifyCode() {
   });
   return (
     <>
+      <Helmet>
+        <title>Verify code</title>
+        <meta name="description" content="Component" />
+      </Helmet>
       {dataStatus?.statusMsg === "success" ? (
         <div className="alert alert-success text-center ">
           {dataStatus.message}

@@ -3,6 +3,7 @@ import style from "./PurshaseDetails.module.css";
 import * as yup from "yup";
 import { useContext } from "react";
 import { cartContext } from "../../Context/cart";
+import { Helmet } from "react-helmet";
 
 function PurshaseDetails() {
   let { cashOnDelivery } = useContext(cartContext);
@@ -33,6 +34,10 @@ function PurshaseDetails() {
   });
   return (
     <>
+      <Helmet>
+        <title>Cash on delivery</title>
+        <meta name="description" content="Component" />
+      </Helmet>
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="details">details: </label>
         <input

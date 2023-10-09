@@ -6,6 +6,7 @@ import { passwordContext } from "../../Context/forgetPassword";
 import { FallingLines } from "react-loader-spinner";
 
 import { Navigate, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 function ResetPassword() {
   let { resetPassword } = useContext(passwordContext);
 
@@ -30,6 +31,10 @@ function ResetPassword() {
   });
   return (
     <>
+      <Helmet>
+        <title>Reset Password</title>
+        <meta name="description" content="Component" />
+      </Helmet>
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="email">email : </label>
         <input

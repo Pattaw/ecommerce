@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import style from "./NotAuthorised.module.css";
+import { Helmet } from "react-helmet";
 
 function NotAuthorised() {
   return (
     <>
+      <Helmet>
+        <title>Not Authroised</title>
+        <meta name="description" content="Component" />
+      </Helmet>
       <div className="row">
         <div className="col-md-12 text-center">
           <div className="warning">
