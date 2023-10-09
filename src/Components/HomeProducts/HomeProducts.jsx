@@ -78,7 +78,7 @@ function HomeProducts() {
           {data?.data.data.map((product) => {
             return (
               <div className="col-md-2" key={product._id}>
-                <div className="product position-relative">
+                <div className="product p-2 position-relative">
                   <div
                     onClick={(e) => getWishList(product._id, e)}
                     className="icon cursor-pointer me-3 my-3 position-absolute top-0 end-0"

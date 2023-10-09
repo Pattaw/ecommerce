@@ -69,8 +69,8 @@ function Products() {
         <div className="row my-3">
           {products?.data.map((product) => {
             return (
-              <div className="col-md-2" key={product._id}>
-                <div className="product position-relative">
+              <div className="col-md-2 " key={product._id}>
+                <div className="product p-2 position-relative">
                   <div
                     onClick={() => getWishList(product._id)}
                     className="icon cursor-pointer me-3 my-3 position-absolute top-0 end-0"

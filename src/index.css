@@ -9,6 +9,29 @@
   --font-family: "Encode Sans Expanded", sans-serif;
   --rating-color: #ffc908;
 }
+* {
+  scroll-behavior: smooth !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0.9rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #7f8c8d;
+}
+.goTop {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  z-index: 999;
+  right: 3rem;
+  bottom: 2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0aad0a;
+}
 
 body {
   font-family: var(--font-family) !important;
