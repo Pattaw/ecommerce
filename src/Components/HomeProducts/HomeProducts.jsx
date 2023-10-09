@@ -33,15 +33,12 @@ function HomeProducts() {
 
   async function getWishList(id) {
     let data = await addWishList(id);
-    console.log(data.data.data.length);
 
     // if(e.target.id === id){
     //   e.target.classList.toggle
     // }
 
     if (data.data.status === "success") {
-      console.log("iam from add wisth", data);
-
       toast.success(data.data.message);
     }
     wishCountControl(data.data.data.length);
