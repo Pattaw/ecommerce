@@ -37,7 +37,7 @@ import WishlistContextProvider from "./Context/wishlist";
 
 function App() {
   let queryProvider = new QueryClient();
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Layout />,
