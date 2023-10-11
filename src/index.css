@@ -72,6 +72,9 @@ a:hover {
   .marginCustom {
     margin-right: 0rem !important;
   }
+  .cartCustom {
+    flex-direction: column;
+  }
 }
 .product:hover .btn {
   opacity: 1;

@@ -60,7 +60,7 @@ function Cart() {
       {cartProduct ? (
         <>
           <h2>SHOP CART</h2>
-          <div className="d-flex justify-content-between">
+          <div className="cartCustom d-flex justify-content-between">
             <h4 className="text-main">
               Total Cart Price is {cartProduct?.totalCartPrice} EGP
             </h4>
