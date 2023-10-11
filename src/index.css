@@ -63,6 +63,12 @@ a:hover {
     opacity: 1;
     transform: translateY(0%);
   }
+  .custom span {
+    left: 95% !important;
+  }
+  .profile-details {
+    font-size: 1rem;
+  }
 }
 .product:hover .btn {
   opacity: 1;

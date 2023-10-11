@@ -19,8 +19,8 @@ function HomeCategory() {
     dots: true,
     infinite: true,
     speed: 1500,
-    slidesToShow: 7,
-    slidesToScroll: 7,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     arrows: false,
   };
   return (

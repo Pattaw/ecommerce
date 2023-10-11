@@ -27,11 +27,11 @@ function Profile() {
             )}
           </div>
           <div>
-            <h2 className="text-capitalize fw-bold">
+            <h2 className="profile-details text-capitalize fw-bold">
               <span className="text-main">name:</span> {decode.name}
             </h2>
 
-            <h2 className="text-capitalize fw-bold">
+            <h2 className="profile-details text-capitalize fw-bold">
               <span className="text-main">role:</span> {decode.role}
             </h2>
           </div>
