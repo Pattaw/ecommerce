@@ -49,7 +49,7 @@ function HomeCategory() {
                 <div className="col-md-2 " key={category._id}>
                   <div className="category">
                     <img
-                      className="w-100"
+                      className="w-100 object-fit-cover"
                       height={200}
                       src={category.image}
                       alt={category.name}
