@@ -95,7 +95,7 @@ function Navbar() {
                     </Link>
                   </li>
 
-                  <li className="nav-item custom me-4 border position-relative border-1 ">
+                  <li className="nav-item custom marginCustom border position-relative border-1 ">
                     <Link className="nav-link" to={"/Wishlist"}>
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main">
                         {wishQuantity}
