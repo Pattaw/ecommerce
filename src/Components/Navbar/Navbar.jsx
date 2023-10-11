@@ -5,7 +5,6 @@ import { tokenContext } from "../../Context/tokenContext";
 import freshCartlogo from "../../Assests/images/freshcart-logo.svg";
 import { cartContext } from "../../Context/cart";
 import { wishlistContext } from "../../Context/wishlist";
-import { NavLink } from "react-router-dom";
 
 function Navbar() {
   let { token, setToken } = useContext(tokenContext);
@@ -36,7 +35,7 @@ function Navbar() {
       <nav className="navbar py-4 navbar-expand-sm navbar-light bg-light">
         <div className="container">
           <a className="navbar-brand" href="#">
-            <img src={freshCartlogo} alt="logo image" />
+            <img src={freshCartlogo} alt="logo" />
           </a>
           <button
             className="navbar-toggler d-lg-none"
@@ -54,50 +53,30 @@ function Navbar() {
             {token ? (
               <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                 <li className="nav-item">
-                  <NavLink to={""} className="nav-link">
+                  <Link to={""} className="nav-link">
                     Home
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    to={"/Products"}
-                    className={({ isActive }) =>
-                      isActive ? "active nav-link" : "nav-link"
-                    }
-                  >
+                  <Link to={"/Products"} className="nav-link">
                     Products
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    to={"/Category"}
-                    className={({ isActive }) =>
-                      isActive ? "active nav-link" : "nav-link"
-                    }
-                  >
+                  <Link to={"/Category"} className="nav-link">
                     Category
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    to={"/Brands"}
-                    className={({ isActive }) =>
-                      isActive ? "active nav-link" : "nav-link"
-                    }
-                  >
+                  <Link to={"/Brands"} className="nav-link">
                     Brands
-                  </NavLink>
+                  </Link>
                 </li>
 
                 <li className="nav-item">
-                  <NavLink
-                    to={"/Profile"}
-                    className={({ isActive }) =>
-                      isActive ? "active nav-link" : "nav-link"
-                    }
-                  >
+                  <Link to={"/Profile"} className="nav-link">
                     Profile
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             ) : (
@@ -108,32 +87,30 @@ function Navbar() {
               {token ? (
                 <>
                   <li className="nav-item">
-                    <NavLink
+                    <Link
                       onClick={removeToken}
-                      className={({ isActive }) =>
-                        isActive ? "active nav-link" : "nav-link"
-                      }
+                      className="nav-link"
                       to={"/Login"}
                     >
                       Logout
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item position-relative mx-md-4 border border-1">
-                    <Link className="nav-link" to={"/Cart"}>
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main">
-                        {productsLength}
-                      </span>
-                      <i className=" fa-solid fa-cart-shopping"></i>
                     </Link>
                   </li>
 
-                  <li className="nav-item border position-relative border-1 ">
+                  <li className="nav-item custom position-relative mx-md-4 border border-1">
+                    <Link className="nav-link" to={"/Cart"}>
+                      <span className="custom-margin position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main">
+                        {productsLength}
+                      </span>
+                      <i className=" fa-solid text-main fs-4 fa-cart-shopping"></i>
+                    </Link>
+                  </li>
+
+                  <li className="nav-item custom border position-relative border-1 ">
                     <Link className="nav-link" to={"/Wishlist"}>
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main">
                         {wishQuantity}
                       </span>
-                      <i className="fa-solid fa-heart"></i>
+                      <i className="fa-solid text-main fs-4 fa-heart"></i>
                     </Link>
                   </li>
                 </>

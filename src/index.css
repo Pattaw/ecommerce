@@ -58,6 +58,12 @@ a:hover {
   transform: translateY(100%);
   opacity: 0;
 }
+@media only screen and (max-width: 768px) {
+  .product .btn {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 .product:hover .btn {
   opacity: 1;
   transform: translateY(0%);

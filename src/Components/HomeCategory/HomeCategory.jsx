@@ -46,7 +46,7 @@ function HomeCategory() {
           <Slider {...settings}>
             {category?.data.map((category) => {
               return (
-                <div className="col-md-2" key={category._id}>
+                <div className="col-md-2 " key={category._id}>
                   <div className="category">
                     <img
                       className="w-100"

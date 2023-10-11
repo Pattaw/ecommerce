@@ -24,8 +24,7 @@ function Cart() {
 
   async function deleteUserData(productId) {
     let { data } = await deleteUserProduct(productId);
-    // console.log(data.data.products.length);
-    console.log();
+
     countControl(data.data.products.length);
 
     setCartProuct(data.data);
