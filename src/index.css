@@ -58,7 +58,7 @@ a:hover {
   transform: translateY(100%);
   opacity: 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .product .btn {
     opacity: 1;
     transform: translateY(0%);
@@ -177,4 +177,26 @@ a:hover {
   .AuthIcon {
     font-size: 5rem;
   }
+}
+.socialMedia {
+  list-style-type: none;
+}
+.socialMedia i {
+  font-size: 2rem;
+}
+.facebook {
+  color: #3b5998;
+}
+.linkedin {
+  color: #007bb6;
+}
+.twitter {
+  color: #55acee;
+}
+.google {
+  color: #db4a39;
+}
+.logout,
+.login {
+  border: 1px solid #0aad0a;
 }

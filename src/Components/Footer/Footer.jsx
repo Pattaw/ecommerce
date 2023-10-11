@@ -91,6 +91,32 @@ function Footer() {
               </div>
             </div>
           </div>
+          <div className="row p-4">
+            <div className="col-md-4 m-auto ">
+              <ul className="p-0 socialMedia d-flex justify-content-between">
+                <li>
+                  <a href="#">
+                    <i class="facebook fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="twitter fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="google fa-brands fa-square-google-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="linkedin fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>

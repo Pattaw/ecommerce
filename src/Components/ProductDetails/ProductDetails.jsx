@@ -75,12 +75,12 @@ function ProductDetails() {
                 </Slider>
               </div>
               <div className="col-md-8">
-                <h4>{productDetails?.data.title}</h4>
+                <h4 className="my-3">{productDetails?.data.title}</h4>
                 <h6 className="my-3">{productDetails?.data.description}</h6>
                 <h6 className="text-main my-3">
                   {productDetails?.data.category.name}
                 </h6>
-                <div className="price-rating d-flex justify-content-between align-content-center">
+                <div className="price-rating pt-3 d-flex justify-content-between align-content-center">
                   <h5 className="fw-bold">{productDetails?.data.price} EGP</h5>
                   <h6>
                     {productDetails?.data.ratingsAverage}

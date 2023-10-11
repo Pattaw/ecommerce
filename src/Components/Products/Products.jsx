@@ -83,16 +83,16 @@ function Products() {
                       src={product.imageCover}
                       alt={product.category.name}
                     />
-                    <h6 className="text-main">
+                    <h5 className="text-main">
                       {product.title.split(" ").slice(0, 2).join(" ")}
-                    </h6>
+                    </h5>
                     <h6>{product.category.name}</h6>
-                    <div className="price-rating d-flex justify-content-between align-items-center">
-                      <h6>{product.price} EGP</h6>
-                      <h6 className="my-2">
+                    <div className="price-rating py-2 d-flex justify-content-between align-items-center">
+                      <h5>{product.price} EGP</h5>
+                      <h5 className="my-2">
                         ${product.ratingsAverage}{" "}
                         <i className="fas fa-star rating-color"></i>
-                      </h6>
+                      </h5>
                     </div>
                   </Link>
                   <button

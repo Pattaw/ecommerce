@@ -86,16 +86,6 @@ function Navbar() {
             <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
               {token ? (
                 <>
-                  <li className="nav-item">
-                    <Link
-                      onClick={removeToken}
-                      className="nav-link"
-                      to={"/Login"}
-                    >
-                      Logout
-                    </Link>
-                  </li>
-
                   <li className="nav-item custom position-relative mx-md-4 border border-1">
                     <Link className="nav-link" to={"/Cart"}>
                       <span className="custom-margin position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main">
@@ -105,7 +95,7 @@ function Navbar() {
                     </Link>
                   </li>
 
-                  <li className="nav-item custom border position-relative border-1 ">
+                  <li className="nav-item custom me-4 border position-relative border-1 ">
                     <Link className="nav-link" to={"/Wishlist"}>
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main">
                         {wishQuantity}
@@ -113,11 +103,23 @@ function Navbar() {
                       <i className="fa-solid text-main fs-4 fa-heart"></i>
                     </Link>
                   </li>
+
+                  <li className="nav-item logout">
+                    <Link
+                      onClick={removeToken}
+                      className="nav-link"
+                      to={"/Login"}
+                    >
+                      <i class="fa-solid fa-right-from-bracket text-main px-2 "></i>
+                      Logout
+                    </Link>
+                  </li>
                 </>
               ) : (
                 <>
-                  <li className="nav-item">
+                  <li className="nav-item login">
                     <Link className="nav-link" to={"/Login"}>
+                      <i class="fa-solid fa-right-to-bracket text-main px-2"></i>
                       Login
                     </Link>
                   </li>
