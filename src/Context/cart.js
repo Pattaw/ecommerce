@@ -117,9 +117,9 @@ export default function CartProvider({ children }) {
   async function onlinePayment(values) {
     try {
       let data = await axios.post(
-        `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://pattaw.github.io/ecommerce/#/`,
+        `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}`,
         { shippingAddress: values },
-        { headers }
+        { headers, params: `https://pattaw.github.io/ecommerce/#` }
       );
       console.log(data);
       return data;
