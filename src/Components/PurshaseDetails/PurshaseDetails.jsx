@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 
 function PurshaseDetails() {
   let navigate = useNavigate();
-  let { cashOnDelivery } = useContext(cartContext);
+  let { cashOnDelivery, countControl } = useContext(cartContext);
 
   let phoneRegexp = /^01[0125][0-9]{8}$/gm;
 
@@ -25,6 +25,7 @@ function PurshaseDetails() {
   async function handleSubmit(values) {
     let data = await cashOnDelivery(values);
     Swal.fire("Completed!", "order is on the way!", "success");
+    countControl(0);
     navigate("/allorders");
   }
 

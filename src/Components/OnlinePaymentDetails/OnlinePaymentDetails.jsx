@@ -3,11 +3,11 @@ import style from "./OnlinePaymentDetails.module.css";
 import * as yup from "yup";
 import { useContext } from "react";
 import { cartContext } from "../../Context/cart";
-import jwtDecode from "jwt-decode";
+
 import { Helmet } from "react-helmet";
 
 function OnlinePaymentDetails() {
-  let { onlinePayment } = useContext(cartContext);
+  let { onlinePayment, countControl } = useContext(cartContext);
 
   let phoneRegexp = /^01[0125][0-9]{8}$/gm;
 
@@ -22,7 +22,7 @@ function OnlinePaymentDetails() {
 
   async function handleSubmit(values) {
     let { data } = await onlinePayment(values);
-    console.log(data);
+
     window.location.href = data.session.url;
   }
 

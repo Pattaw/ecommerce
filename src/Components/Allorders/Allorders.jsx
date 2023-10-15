@@ -9,6 +9,7 @@ function Allorders() {
   let decoded = jwtDecode(localStorage.getItem("token"));
   let [userOrder, setUserOrder] = useState(null);
   let userId = decoded.id;
+  let { getUserOrders, countControl } = useContext(cartContext);
 
   let options = {
     weekday: "long",
@@ -16,7 +17,6 @@ function Allorders() {
     month: "short",
     day: "numeric",
   };
-  let { getUserOrders } = useContext(cartContext);
 
   async function getData(Id) {
     let { data } = await getUserOrders(Id);
