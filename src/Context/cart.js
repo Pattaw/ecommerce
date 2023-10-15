@@ -119,9 +119,9 @@ export default function CartProvider({ children }) {
       let data = await axios.post(
         `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}`,
         { shippingAddress: values },
-        { headers, params: `https://pattaw.github.io/ecommerce/#` }
+        { headers, params: { url: "https://pattaw.github.io/ecommerce/#" } }
       );
-      console.log(data);
+
       return data;
     } catch (error) {
       return error;

@@ -22,6 +22,7 @@ function OnlinePaymentDetails() {
 
   async function handleSubmit(values) {
     let { data } = await onlinePayment(values);
+    console.log(data);
     window.location.href = data.session.url;
   }
 

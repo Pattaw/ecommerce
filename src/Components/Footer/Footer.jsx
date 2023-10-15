@@ -96,22 +96,22 @@ function Footer() {
               <ul className="p-0 socialMedia d-flex justify-content-between">
                 <li>
                   <a href="#">
-                    <i class="facebook fa-brands fa-facebook-f"></i>
+                    <i className="facebook fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="twitter fa-brands fa-twitter"></i>
+                    <i className="twitter fa-brands fa-twitter"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="google fa-brands fa-square-google-plus"></i>
+                    <i className="google fa-brands fa-square-google-plus"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="linkedin fa-brands fa-linkedin"></i>
+                    <i className="linkedin fa-brands fa-linkedin"></i>
                   </a>
                 </li>
               </ul>

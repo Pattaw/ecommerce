@@ -110,7 +110,7 @@ function Navbar() {
                       className="nav-link"
                       to={"/Login"}
                     >
-                      <i class="fa-solid fa-right-from-bracket text-main px-2 "></i>
+                      <i className="fa-solid fa-right-from-bracket text-main px-2 "></i>
                       Logout
                     </Link>
                   </li>
@@ -119,7 +119,7 @@ function Navbar() {
                 <>
                   <li className="nav-item login">
                     <Link className="nav-link" to={"/Login"}>
-                      <i class="fa-solid fa-right-to-bracket text-main px-2"></i>
+                      <i className="fa-solid fa-right-to-bracket text-main px-2"></i>
                       Login
                     </Link>
                   </li>
