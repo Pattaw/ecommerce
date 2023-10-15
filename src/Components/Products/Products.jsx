@@ -69,7 +69,7 @@ function Products() {
         <div className="row my-3">
           {products?.data.map((product) => {
             return (
-              <div className="col-md-2 " key={product._id}>
+              <div className="col-md-3 " key={product._id}>
                 <div className="product p-2 position-relative">
                   <div
                     onClick={() => getWishList(product._id)}
@@ -83,14 +83,14 @@ function Products() {
                       src={product.imageCover}
                       alt={product.category.name}
                     />
-                    <h5 className="text-main">
+                    <h5 className="pt-2 text-main">
                       {product.title.split(" ").slice(0, 2).join(" ")}
                     </h5>
                     <h6>{product.category.name}</h6>
                     <div className="price-rating py-2 d-flex justify-content-between align-items-center">
-                      <h5>{product.price} EGP</h5>
+                      <h5 className=" my-2 fw-bold">{product.price} EGP</h5>
                       <h5 className="my-2">
-                        ${product.ratingsAverage}{" "}
+                        {product.ratingsAverage}{" "}
                         <i className="fas fa-star rating-color"></i>
                       </h5>
                     </div>

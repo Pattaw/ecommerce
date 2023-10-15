@@ -77,7 +77,7 @@ function HomeProducts() {
         <div className="row my-3">
           {data?.data.data.map((product) => {
             return (
-              <div className="col-md-2" key={product._id}>
+              <div className="col-md-3" key={product._id}>
                 <div className="product p-2 position-relative">
                   <div
                     onClick={(e) => getWishList(product._id, e)}
@@ -100,9 +100,9 @@ function HomeProducts() {
                     </h5>
                     <h6>{product.category.name}</h6>
                     <div className="price-rating py-2 d-flex justify-content-between align-items-center">
-                      <h5>{product.price} EGP</h5>
+                      <h5 className=" my-2 fw-bold">{product.price} EGP</h5>
                       <h5 className="my-2">
-                        ${product.ratingsAverage}{" "}
+                        {product.ratingsAverage}{" "}
                         <i className="fas fa-star rating-color"></i>
                       </h5>
                     </div>

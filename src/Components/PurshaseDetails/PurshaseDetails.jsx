@@ -4,8 +4,11 @@ import * as yup from "yup";
 import { useContext } from "react";
 import { cartContext } from "../../Context/cart";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function PurshaseDetails() {
+  let navigate = useNavigate();
   let { cashOnDelivery } = useContext(cartContext);
 
   let phoneRegexp = /^01[0125][0-9]{8}$/gm;
@@ -21,6 +24,8 @@ function PurshaseDetails() {
 
   async function handleSubmit(values) {
     let data = await cashOnDelivery(values);
+    Swal.fire("Completed!", "order is on the way!", "success");
+    navigate("/allorders");
   }
 
   let formik = useFormik({
